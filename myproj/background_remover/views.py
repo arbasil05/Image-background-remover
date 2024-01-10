@@ -21,8 +21,12 @@ def action(request):
         uploaded_file = request.FILES.get('file')
 
         if uploaded_file:
+            print("Image uploaded succesfully")
+            print(f"Image recieved: {uploaded_file}")
             x = Image.open(uploaded_file)
+            print("Removing background")
             result = remove(x)
+            print("Successful")
 
             # Save the image in memory for displaying in Result.html
             image_io = io.BytesIO()
@@ -45,6 +49,8 @@ def download_image(request):
     # Retrieve image data and filename from the session
     image_data = request.session.get('result_image_data')
     filename = request.session.get('result_filename', 'convert.png')  # Default to 'convert.png' if not provided
+    print(f"Downloading image : {filename}")
+    print("Process completed succesfully")
 
     if image_data:
         # Clear the session data after retrieving it
