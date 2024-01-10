@@ -115,4 +115,4 @@ SOFTWARE.
 
 https://www.pexels.com/photo/photo-of-a-man-listening-music-on-his-phone-846741/
 
-https://www.pexels.com/photo/woman-wearing-black-jacket-3768882/# Image-background-remover
+https://www.pexels.com/photo/woman-wearing-black-jacket-3768882/
