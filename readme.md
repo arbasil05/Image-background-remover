@@ -8,8 +8,8 @@ This is a very simple image background remover built using python with the djang
 ## Preview Page: 
 ![Website](./output/Website/preview_output.png)
 ## Output :
-![output_1](./output/result/output_1.png)
-![output_2](./output/result/output_2.png)
+![output_1](./output/result/convert_20240118114738.png)
+
 
 # background_remover app :
 
