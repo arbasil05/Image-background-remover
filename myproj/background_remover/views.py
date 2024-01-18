@@ -1,4 +1,3 @@
-# views.py
 from django.shortcuts import render
 from rembg import remove
 from PIL import Image
@@ -11,6 +10,7 @@ from django.shortcuts import get_object_or_404
 import os
 from django.conf import settings
 from datetime import datetime
+from .models import UploadedImage
 
 def home(request):
     return render(request, 'home.html')
@@ -21,10 +21,15 @@ def action(request):
         uploaded_file = request.FILES.get('file')
 
         if uploaded_file:
-            print("Image uploaded succesfully")
-            print(f"Image recieved: {uploaded_file}")
+            print("Image uploaded successfully")
+            print(f"Image received: {uploaded_file}")
+
+            # Save the uploaded image to the database
+            uploaded_image = UploadedImage(image=uploaded_file)
+            uploaded_image.save()
+
             x = Image.open(uploaded_file)
-            print("Removing background")
+            print("Removing background....")
             result = remove(x)
             print("Successful")
 
